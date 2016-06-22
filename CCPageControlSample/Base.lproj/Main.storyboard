@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slK-Ky-7XY" customClass="CCPageControl">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="mNO-hV-Il6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mNO-hV-Il6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="mNO-hV-Il6"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5k-TR-6za">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="E5k-TR-6za" secondAttribute="trailing" id="Ivd-mT-SXz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="slK-Ky-7XY" secondAttribute="trailing" constant="60" id="Mjv-oo-tWT"/>
+                            <constraint firstItem="slK-Ky-7XY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="362" id="T17-fb-2Xt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="slK-Ky-7XY" secondAttribute="bottom" constant="37" id="TC7-wY-2mc"/>
+                            <constraint firstItem="E5k-TR-6za" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uj2-dA-KP9"/>
+                            <constraint firstItem="E5k-TR-6za" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jPW-i9-sSf"/>
+                            <constraint firstItem="slK-Ky-7XY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="zJl-i5-2ZT"/>
+                            <constraint firstItem="E5k-TR-6za" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="zsa-FO-IJd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="slK-Ky-7XY"/>
+                                <exclude reference="E5k-TR-6za"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Ivd-mT-SXz"/>
+                                <exclude reference="Uj2-dA-KP9"/>
+                                <exclude reference="jPW-i9-sSf"/>
+                                <exclude reference="zsa-FO-IJd"/>
+                                <exclude reference="Mjv-oo-tWT"/>
+                                <exclude reference="T17-fb-2Xt"/>
+                                <exclude reference="zJl-i5-2ZT"/>
+                                <exclude reference="TC7-wY-2mc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="slK-Ky-7XY"/>
+                                <include reference="E5k-TR-6za"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Ivd-mT-SXz"/>
+                                <include reference="Uj2-dA-KP9"/>
+                                <include reference="jPW-i9-sSf"/>
+                                <include reference="zsa-FO-IJd"/>
+                                <include reference="Mjv-oo-tWT"/>
+                                <exclude reference="T17-fb-2Xt"/>
+                                <include reference="zJl-i5-2ZT"/>
+                                <include reference="TC7-wY-2mc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="slK-Ky-7XY" id="pI1-Um-RCr"/>
+                        <outlet property="scrollView" destination="E5k-TR-6za" id="igh-Lt-agg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.5" y="340.5"/>
+        </scene>
+    </scenes>
+</document>
