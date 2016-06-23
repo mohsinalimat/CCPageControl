@@ -52,8 +52,8 @@
 		B600B27A1D1A825C00B7EF5F /* CCPageControlSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCPageControlSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B600B27E1D1A825C00B7EF5F /* CCPageControlSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCPageControlSampleUITests.m; sourceTree = "<group>"; };
 		B600B2801D1A825C00B7EF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B600B28D1D1A831300B7EF5F /* CCPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPageControl.h; path = CCPageControl/CCPageControl.h; sourceTree = "<group>"; };
-		B600B28E1D1A831300B7EF5F /* CCPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPageControl.m; path = CCPageControl/CCPageControl.m; sourceTree = "<group>"; };
+		B600B28D1D1A831300B7EF5F /* CCPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPageControl.h; sourceTree = "<group>"; };
+		B600B28E1D1A831300B7EF5F /* CCPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPageControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +151,7 @@
 				B600B28E1D1A831300B7EF5F /* CCPageControl.m */,
 			);
 			name = Class;
+			path = ../CCPageControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,6 +515,7 @@
 				B600B2851D1A825C00B7EF5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B600B2861D1A825C00B7EF5F /* Build configuration list for PBXNativeTarget "CCPageControlSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +524,7 @@
 				B600B2881D1A825C00B7EF5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B600B2891D1A825C00B7EF5F /* Build configuration list for PBXNativeTarget "CCPageControlSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +533,7 @@
 				B600B28B1D1A825C00B7EF5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

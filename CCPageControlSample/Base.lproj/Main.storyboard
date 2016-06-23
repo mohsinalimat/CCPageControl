@@ -3,10 +3,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,6 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5k-TR-6za">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slK-Ky-7XY" customClass="CCPageControl">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -35,9 +39,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5k-TR-6za">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -52,10 +53,11 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="slK-Ky-7XY"/>
                                 <exclude reference="E5k-TR-6za"/>
+                                <exclude reference="slK-Ky-7XY"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="TC7-wY-2mc"/>
                                 <exclude reference="Ivd-mT-SXz"/>
                                 <exclude reference="Uj2-dA-KP9"/>
                                 <exclude reference="jPW-i9-sSf"/>
@@ -63,15 +65,15 @@
                                 <exclude reference="Mjv-oo-tWT"/>
                                 <exclude reference="T17-fb-2Xt"/>
                                 <exclude reference="zJl-i5-2ZT"/>
-                                <exclude reference="TC7-wY-2mc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="slK-Ky-7XY"/>
                                 <include reference="E5k-TR-6za"/>
+                                <include reference="slK-Ky-7XY"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="TC7-wY-2mc"/>
                                 <include reference="Ivd-mT-SXz"/>
                                 <include reference="Uj2-dA-KP9"/>
                                 <include reference="jPW-i9-sSf"/>
@@ -79,10 +81,10 @@
                                 <include reference="Mjv-oo-tWT"/>
                                 <exclude reference="T17-fb-2Xt"/>
                                 <include reference="zJl-i5-2ZT"/>
-                                <include reference="TC7-wY-2mc"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="h3v-sA-p1v"/>
                     <connections>
                         <outlet property="pageControl" destination="slK-Ky-7XY" id="pI1-Um-RCr"/>
                         <outlet property="scrollView" destination="E5k-TR-6za" id="igh-Lt-agg"/>
@@ -90,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.5" y="340.5"/>
+            <point key="canvasLocation" x="1104" y="126"/>
         </scene>
     </scenes>
 </document>

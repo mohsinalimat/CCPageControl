@@ -56,6 +56,21 @@
     self.hidden = _hidesForSinglePage && _numberOfPages <= 1;
 }
 
+- (void)setPageIndicatorTintColor:(UIColor *)pageIndicatorTintColor {
+    _pageIndicatorTintColor = pageIndicatorTintColor;
+    
+    for (UIView *view in pageIndicatorContainerView.subviews) {
+        view.layer.borderColor = pageIndicatorTintColor.CGColor;
+        view.layer.borderWidth = 0.5;
+    }
+}
+
+- (void)setCurrentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor {
+    _currentPageIndicatorTintColor = currentPageIndicatorTintColor;
+    
+    currentPageIndicatorView.backgroundColor = currentPageIndicatorTintColor;
+}
+
 - (void)setEnabled:(BOOL)enabled {
     [super setEnabled:enabled];
     
@@ -63,18 +78,6 @@
 }
 
 #pragma mark - initialization methods
-- (instancetype)init {
-    self = [super init];
-    
-    if (self) {
-        [self initialize];
-    }
-    
-    [self didInit];
-    
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
@@ -83,7 +86,11 @@
         [self setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
         
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        
+        [self initialize];
     }
+    
+    [self didInit];
     
     return self;
 }
@@ -162,6 +169,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
     UITouch *touch = [[touches allObjects] objectAtIndex:0];
     
     if (touch!=nil && self.enabled) {
