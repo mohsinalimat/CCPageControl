@@ -5,7 +5,6 @@ A nice, animated UIPageControl alternative. Written in Swift but ported to Objec
 <p align="center">
 <img src="https://cloud.githubusercontent.com/assets/601431/10017520/6563ec6e-612f-11e5-872f-0d75c3b31fd2.gif">
 </p>
-<h1 align="center">Page Control</h1>
 
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Cokile/CCPageControl/blob/master/Licence)
 [![](https://img.shields.io/github/release/Cokile/CCPageControl.svg)](https://github.com/Cokile/CCPageControl/releases)
